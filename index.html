@@ -126,7 +126,7 @@
 
   <section id="youtube">
     <h2>Watch Our Latest Streams</h2>
-    <iframe src="https://www.youtube.com/live/z_FCmJh9iSE?si=hGKA-sxCWyI8hAvk" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCAnMm0-j8Gl959A2hVLqeZA" allowfullscreen></iframe>
     
     <div id="subscriber-count">
       Loading subscriber count...
@@ -135,7 +135,7 @@
 
   <section id="discord">
     <h2>Join Our Discord Community</h2>
-    <p>Connect with over 10,000 members and engage in discussions, events, and more!</p>
+    <p>Connect with members and engage in discussions, events, and more!</p>
     <a href="https://discord.gg/7NhttJdyeC" class="discord-btn">Join Discord</a>
   </section>
 
@@ -156,8 +156,6 @@
         }
 
         const data = await response.json();
-        console.log('API Response:', data); // Log the API response
-        
         if (data.items.length > 0) {
           const subscriberCount = data.items[0].statistics.subscriberCount;
           document.getElementById('subscriber-count').textContent = `Subscribers: ${subscriberCount}`;
