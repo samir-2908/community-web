@@ -156,6 +156,8 @@
         }
 
         const data = await response.json();
+        console.log('API Response:', data); // Log the API response
+        
         if (data.items.length > 0) {
           const subscriberCount = data.items[0].statistics.subscriberCount;
           document.getElementById('subscriber-count').textContent = `Subscribers: ${subscriberCount}`;
